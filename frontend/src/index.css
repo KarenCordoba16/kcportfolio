@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Variables globales ─────────────────────────────────────── */
+:root {
+  --blue-primary: #2563eb;
+  --blue-light:   #60a5fa;
+  --blue-dark:    #1e3a8a;
+}
+
+/* ── Reset & base ───────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Sora', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dark mode body */
+.dark body,
+body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* ── Scrollbar personalizada ───────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #f1f5f9; }
+::-webkit-scrollbar-thumb  { background: #2563eb; border-radius: 3px; }
+.dark ::-webkit-scrollbar-track { background: #1e293b; }
+
+/* ── Selección de texto ────────────────────────────────────── */
+::selection {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ── Utilidades animación ──────────────────────────────────── */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Elementos que animarán al entrar al viewport */
+@layer components {
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}  
+
+/* ── Gradiente de texto ────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow effect ───────────────────────────────────────────── */
+.glow-blue {
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
+}
