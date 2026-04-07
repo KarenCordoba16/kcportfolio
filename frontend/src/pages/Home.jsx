@@ -3,15 +3,17 @@
 
 import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
+import { FaReact, FaJs, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
 
 // Código decorativo animado
 const CodeSnippet = () => (
   <div className="font-mono text-sm leading-7 select-none">
     <div><span className="text-blue-400">const</span> <span className="text-cyan-300">developer</span> <span className="text-white">=</span> {'{'}</div>
-    <div className="pl-4"><span className="text-green-400">name</span><span className="text-white">:</span> <span className="text-amber-300">'Tu Nombre'</span><span className="text-white">,</span></div>
+    <div className="pl-4"><span className="text-green-400">name</span><span className="text-white">:</span> <span className="text-amber-300">Karen Cordoba</span><span className="text-white">,</span></div>
     <div className="pl-4"><span className="text-green-400">role</span><span className="text-white">:</span> <span className="text-amber-300">'Full Stack Developer'</span><span className="text-white">,</span></div>
     <div className="pl-4"><span className="text-green-400">stack</span><span className="text-white">: [</span><span className="text-amber-300">'React'</span><span className="text-white">, </span><span className="text-amber-300">'Node.js'</span><span className="text-white">, </span><span className="text-amber-300">'PostgreSQL'</span><span className="text-white">],</span></div>
-    <div className="pl-4"><span className="text-green-400">passion</span><span className="text-white">:</span> <span className="text-amber-300">'Security & Dev'</span><span className="text-white">,</span></div>
+    <div className="pl-4"><span className="text-green-400">passion</span><span className="text-white">:</span> <span className="text-amber-300">'Dev'</span><span className="text-white">,</span></div>
     <div className="pl-4"><span className="text-green-400">available</span><span className="text-white">:</span> <span className="text-blue-300">true</span></div>
     <div>{'}'}<span className="text-white">;</span></div>
   </div>
@@ -58,25 +60,27 @@ export default function Home() {
               border border-blue-200 dark:border-blue-700">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse-slow" />
               <span className="text-xs font-mono font-medium text-blue-700 dark:text-blue-300">
-                Disponible para proyectos
+                Available for projects
               </span>
             </div>
 
             {/* Heading */}
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 dark:text-white">
-                Hola, soy
+                Hi, I'm 
                 <br />
-                <span className="gradient-text">Tu Nombre</span>
+                <span className="gradient-text">Karen</span>
               </h1>
               <p className="mt-3 text-xl font-semibold text-blue-600 dark:text-blue-400 font-mono">
-                Full Stack Developer & Security
+                Full Stack Developer 
               </p>
+              <p className="mt-3 text-l font-extralight text-blue-600 dark:text-blue-400 font-mono">
+                System Analyst  
+              </p>              
             </div>
 
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
-              Desarrollo aplicaciones web completas con foco en rendimiento, seguridad y
-              experiencia de usuario. Especializado en el ecosistema JavaScript y seguridad informática.
+              I develop full-stack web applications using JavaScript, with React for the front end and building efficient APIs on the back end. I focus on creating functional, clear, and well-structured solutions.
             </p>
 
             {/* CTAs */}
@@ -87,7 +91,7 @@ export default function Home() {
                   bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30
                   transition-all duration-200 active:scale-95"
               >
-                Ver proyectos
+                View projects
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -101,7 +105,7 @@ export default function Home() {
                   dark:hover:border-blue-400 dark:hover:text-blue-400
                   transition-all duration-200"
               >
-                Contactarme
+                Contact me
               </Link>
             </div>
           </div>
@@ -128,15 +132,18 @@ export default function Home() {
               <div className="flex-1 px-4 py-3 rounded-xl bg-white dark:bg-slate-800
                 border border-slate-200 dark:border-slate-700 shadow-sm">
                 <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Stack principal</p>
-                <div className="flex gap-2">
-                  {['⚛️', '🟢', '🐘'].map((e, i) => (
-                    <span key={i} className="text-xl">{e}</span>
-                  ))}
+                <div className="flex gap-2 text-xl">
+                  <FaReact className="text-cyan-400" />
+                  <FaJs className="text-yellow-400" />
+                  <SiTailwindcss className='text-cyan-500'/>
+                  <FaNodeJs className='text-green-600' />
+                  <SiNextdotjs className="text-white" />
+                  <SiMongodb className="text-green-500" />
                 </div>
               </div>
               <div className="flex-1 px-4 py-3 rounded-xl bg-blue-600 shadow-lg shadow-blue-600/30">
-                <p className="text-xs text-blue-200 mb-1">Especialidad</p>
-                <p className="text-sm font-semibold text-white">Security + Dev</p>
+                <p className="text-xs text-blue-200 mb-1">Speciality</p>
+                <p className="text-sm font-semibold text-white">Full Stack Developer</p>
               </div>
             </div>
           </div>
@@ -145,10 +152,10 @@ export default function Home() {
         {/* ── Stats ────────────────────────────────────────────── */}
         <div ref={statsRef} className="reveal animate-delay-400 mt-16
           grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <Stat value="3+" label="Años de experiencia" />
-          <Stat value="20+" label="Proyectos completados" />
-          <Stat value="10+" label="Tecnologías" />
-          <Stat value="100%" label="Compromiso" />
+          <Stat value="Web Apps" label="Full Stack Development" />
+          <Stat value="Problem Solving" label="Practical Approach" />
+          <Stat value="3+" label="Projects Built" />
+          <Stat value="Continuous" label="Learning Mindset" />
         </div>
       </div>
     </section>
