@@ -3,13 +3,14 @@
 
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import { FaLaptopCode } from "react-icons/fa";
 
 const NAV_LINKS = [
-  { to: '/',             label: 'Inicio' },
-  { to: '/about',        label: 'Sobre mí' },
-  { to: '/projects',     label: 'Proyectos' },
-  { to: '/technologies', label: 'Tecnologías' },
-  { to: '/contact',      label: 'Contacto' },
+  { to: '/',             label: 'Home' },
+  { to: '/about',        label: 'About me' },
+  { to: '/projects',     label: 'Projects' },
+  { to: '/technologies', label: 'Technologies' },
+  { to: '/contact',      label: 'Contact' },
 ];
 
 // Icono SVG: sol
@@ -67,10 +68,12 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           <NavLink to="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center
               group-hover:scale-105 transition-transform duration-200">
-              <span className="text-white font-mono font-bold text-sm">FS</span>
+              <span className="text-white font-mono font-bold text-xl">
+                <FaLaptopCode />
+              </span>
             </div>
             <span className="font-semibold text-slate-900 dark:text-white tracking-tight">
-              Dev<span className="text-blue-600">Portfolio</span>
+              Karen<span className="text-blue-600">Cordoba</span>
             </span>
           </NavLink>
 
