@@ -7,7 +7,7 @@ import { FaLaptopCode } from "react-icons/fa";
 
 const NAV_LINKS = [
   { to: '/',             label: 'Home' },
-  { to: '/about',        label: 'About me' },
+  { to: '/about',        label: 'About' },
   { to: '/projects',     label: 'Projects' },
   { to: '/technologies', label: 'Technologies' },
   { to: '/contact',      label: 'Contact' },
