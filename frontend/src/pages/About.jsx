@@ -3,34 +3,41 @@
 
 import { useReveal } from '../hooks/useReveal';
 import { SectionTitle } from '../components/ui/index.jsx';
+import { FaMapPin, FaBriefcase, FaGraduationCap, FaGlobe } from "react-icons/fa";
+
 
 const SKILLS = [
-  { category: 'Frontend',   items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
-  { category: 'Backend',    items: ['Node.js', 'Express', 'Python', 'REST APIs'] },
-  { category: 'Base de datos', items: ['PostgreSQL', 'MongoDB', 'Redis', 'SQL'] },
-  { category: 'DevOps & Sec',  items: ['Docker', 'Linux', 'Git', 'Pentesting básico'] },
+  { category: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'] },
+  { category: 'Backend', items: ['Python', 'Django', 'REST APIs'] },
+  { category: 'Databases', items: ['MySQL', 'MongoDB', 'PostgreSQL'] },
+  { category: 'Tools', items: ['Git', 'Figma', 'Postman'] },
 ];
 
 const TIMELINE = [
   {
-    year: '2024 — presente',
+    year: '2025 — Present',
     title: 'Full Stack Developer',
-    desc: 'Desarrollo de aplicaciones web completas. Implementación de arquitecturas seguras y escalables.',
+    desc: 'Development of full stack web applications using React on the frontend and JavaScript on the backend. Focused on practical projects and continuous improvement.',
+  },
+  {
+    year: '2025',
+    title: 'Collaborative Project (Nextalent)',
+    desc: 'Development of a web platform as part of a team to connect young professionals with companies through internship opportunities.',
+  },
+  {
+    year: '2024',
+    title: 'Web Development Training',
+    desc: 'Learning JavaScript, React, and the fundamentals of frontend and backend development.',
   },
   {
     year: '2023',
-    title: 'Seguridad Informática',
-    desc: 'Formación en ciberseguridad: análisis de vulnerabilidades, redes y seguridad en aplicaciones web.',
+    title: 'Collaborative Project (DentCorp)',
+    desc: 'Team development of a platform for scheduling appointments for a dental clinic.',
   },
   {
-    year: '2022',
-    title: 'Desarrollo Backend',
-    desc: 'Especialización en Node.js, APIs REST, bases de datos relacionales y no relacionales.',
-  },
-  {
-    year: '2021',
-    title: 'Inicio en programación',
-    desc: 'Primeros pasos con JavaScript, HTML/CSS y los fundamentos del desarrollo web.',
+    year: '2023',
+    title: 'Systems Analyst',
+    desc: 'Completion of academic training focused on understanding systems, logic, and problem-solving.',
   },
 ];
 
@@ -69,9 +76,9 @@ export default function About() {
 
       <div ref={titleRef} className="reveal">
         <SectionTitle
-          tag="Sobre mí"
-          title="Desarrollador apasionado por la tecnología y la seguridad"
-          subtitle="Combino el desarrollo Full Stack con el pensamiento de seguridad para construir aplicaciones robustas."
+          tag="About me"
+          title="Developer passionate about technology"
+          subtitle="I build full stack web applications focused on functionality, clarity, and user experience."
         />
       </div>
 
@@ -81,18 +88,15 @@ export default function About() {
         <div ref={bioRef} className="reveal flex flex-col gap-6">
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
-              Soy un desarrollador Full Stack con pasión por crear soluciones digitales que
-              no solo funcionen perfectamente, sino que también sean seguras desde su diseño.
+              I'm a Full Stack Developer focused on building functional, clear, and well-structured web applications. I enjoy creating practical solutions that solve real-world problems.
             </p>
+
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
-              Mi enfoque integra las mejores prácticas de desarrollo con un pensamiento orientado
-              a la seguridad informática. Cada línea de código que escribo contempla posibles
-              vectores de ataque y cómo mitigarlos.
+              I primarily work with JavaScript and React on the frontend, and Python with Django on the backend, developing complete applications from concept to implementation.
             </p>
+
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
-              Actualmente enfocado en el ecosistema JavaScript (React + Node.js), bases de datos
-              relacionales con PostgreSQL, y en ampliar mis conocimientos en ciberseguridad ofensiva
-              y defensiva.
+              I am continuously learning, strengthening my technical skills and improving my ability to build high-quality software.
             </p>
           </div>
 
@@ -101,22 +105,21 @@ export default function About() {
             border border-blue-200 dark:border-blue-700">
             <div className="flex items-center gap-2 mb-3">
               <span className="text-lg">🎯</span>
-              <h3 className="font-semibold text-slate-900 dark:text-white">Objetivo profesional</h3>
+                <h3 className="font-semibold text-slate-900 dark:text-white">Objective</h3>
+
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  I am looking to join a development team where I can continue growing as a developer, contribute with practical solutions, and gain experience in real-world environments.
+                </p>
             </div>
-            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Integrarme a un equipo de desarrollo donde pueda aportar valor construyendo
-              aplicaciones seguras y de alta calidad, mientras continúo creciendo en el área
-              de seguridad informática aplicada al desarrollo.
-            </p>
           </div>
 
           {/* Datos rápidos */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: '📍', label: 'Ubicación',   value: 'Argentina' },
-              { icon: '💼', label: 'Disponible',  value: 'Remoto / Híbrido' },
-              { icon: '🎓', label: 'Formación',   value: 'Autodidacta + cursos' },
-              { icon: '🌐', label: 'Idiomas',     value: 'Español, Inglés' },
+              { icon: <FaMapPin color='red'/>, label: 'Location', value: 'Argentina' },
+              { icon: <FaBriefcase  color='brown'/>, label: 'Availability', value: 'Remote / Hybrid' },
+              { icon: <FaGraduationCap color='black' />, label: 'Education', value: 'Systems Analyst' },
+              { icon: <FaGlobe color='gray'/>, label: 'Languages', value: 'Spanish, English' },
             ].map(({ icon, label, value }) => (
               <div key={label} className="flex items-start gap-3 p-4 rounded-xl
                 bg-white dark:bg-slate-800
@@ -163,7 +166,7 @@ export default function About() {
       <div ref={skillsRef} className="reveal mt-16">
         <h3 className="text-sm font-mono font-semibold text-blue-600 dark:text-blue-400
           mb-6 tracking-widest uppercase">
-          Tecnologías que manejo
+          Technologies I work with
         </h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {SKILLS.map(skill => (
