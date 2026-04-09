@@ -53,8 +53,8 @@ export function SectionTitle({ tag, title, subtitle, center = false }) {
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl text-lg leading-relaxed
-          ${center ? 'mx-auto' : ''}">
+        <p className={`mt-4 text-slate-600 dark:text-slate-400 max-w-2xl text-lg leading-relaxed
+          ${center ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}

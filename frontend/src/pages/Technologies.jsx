@@ -11,15 +11,12 @@ const FALLBACK_TECHS = [
   { id: 1,  name: 'React',       logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
   { id: 2,  name: 'Node.js',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
   { id: 3,  name: 'PostgreSQL',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-  { id: 4,  name: 'TypeScript',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-  { id: 5,  name: 'JavaScript',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  { id: 6,  name: 'Python',      logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { id: 7,  name: 'Docker',      logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-  { id: 8,  name: 'Git',         logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-  { id: 9,  name: 'Express',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
-  { id: 10, name: 'MongoDB',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-  { id: 11, name: 'Linux',       logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
-  { id: 12, name: 'Tailwind',    logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+  { id: 4,  name: 'JavaScript',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { id: 5,  name: 'Python',      logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { id: 6,  name: 'Git',         logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { id: 7,  name: 'Express',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+  { id: 8,  name: 'MongoDB',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+  { id: 9,  name: 'Tailwind',    logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
 ];
 
 function TechCard({ tech }) {
@@ -42,7 +39,10 @@ function TechCard({ tech }) {
             alt={tech.name}
             className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
             loading="lazy"
-            onError={e => { e.target.style.display = 'none'; }}
+            onError={e => {
+              e.target.onerror = null;
+              e.target.src = '/fallback-icon.svg';
+            }}
           />
         ) : (
           <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/40
@@ -89,18 +89,18 @@ export default function Technologies() {
 
       <div ref={titleRef} className="reveal">
         <SectionTitle
-          tag="Tecnologías"
-          title="Herramientas de mi stack"
-          subtitle="Las tecnologías que uso día a día para construir aplicaciones completas, seguras y escalables."
+          tag="Technologies"
+          title="Tools in my stack"
+          subtitle="Technologies I use to build functional and well-structured web applications."
           center
         />
       </div>
 
       {loading ? (
-        <Loader text="Cargando tecnologías..." />
+        <Loader text="Loading stack..." />
       ) : (
         <div ref={gridRef} className="reveal">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 ">
             {technologies.map(tech => (
               <TechCard key={tech.id} tech={tech} />
             ))}
@@ -111,7 +111,7 @@ export default function Technologies() {
       {/* Frase de cierre */}
       <div className="mt-16 text-center">
         <p className="text-sm text-slate-500 dark:text-slate-400 font-mono">
-          Y siempre aprendiendo nuevas herramientas...
+          Next step: .NET 
           <span className="ml-2 text-blue-600 dark:text-blue-400">🚀</span>
         </p>
       </div>
