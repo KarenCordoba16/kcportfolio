@@ -54,60 +54,57 @@ INSERT INTO technologies (name, logo_url) VALUES
   ('React',       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'),
   ('Node.js',     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'),
   ('PostgreSQL',  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'),
-  ('TypeScript',  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'),
   ('JavaScript',  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'),
   ('Python',      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'),
-  ('Docker',      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg'),
   ('Git',         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'),
   ('Express',     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'),
   ('MongoDB',     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'),
-  ('Linux',       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'),
-  ('Tailwind',    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg')
+  ('Tailwind',    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg')
 ON CONFLICT (name) DO NOTHING;
 
 -- Proyectos de ejemplo
 INSERT INTO projects (title, description, image_url, project_url, github_url) VALUES
 (
-  'E-Commerce Full Stack',
-  'Plataforma de comercio electrónico completa con autenticación JWT, carrito de compras, pasarela de pagos con Stripe y panel de administración. Arquitectura de microservicios con Docker.',
-  'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
-  'https://demo.ejemplo.com',
-  'https://github.com/tuusuario/ecommerce'
+  'Nextalent',
+  'Web platform developed in a team to connect young professionals with companies through internship opportunities. Focused on usability and real-world application.',
+  'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80',
+  NULL,
+  'https://github.com/Fran1107/NexTalent-Front'
 ),
 (
-  'Sistema de Monitoreo de Red',
-  'Dashboard en tiempo real para monitoreo de infraestructura de red. Detecta intrusiones, analiza tráfico y genera alertas. Integrado con Wireshark y scripts de análisis de seguridad.',
-  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
-  'https://monitor.ejemplo.com',
-  'https://github.com/tuusuario/network-monitor'
+  'DentCorp',
+  'Web application developed in a team for managing dental appointments, allowing users to schedule and organize visits efficiently.',
+  'https://media.istockphoto.com/id/2214939121/photo/business-team-analyzing-financial-data-on-digital-tablets-during-a-meeting.jpg?s=1024x1024&w=is&k=20&c=U1kt5uKz7Wdq4dDDnYFW0nH5dLtmHvzQNEYg0RJPqeI=',
+  NULL,
+  'https://github.com/GastonCamu/DentCorp'
 ),
 (
-  'API REST con Autenticación',
-  'API RESTful completa con autenticación JWT, roles y permisos, rate limiting, documentación Swagger y tests automatizados con Jest. Desplegada en AWS con CI/CD.',
-  'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80',
-  'https://api.ejemplo.com/docs',
-  'https://github.com/tuusuario/rest-api'
+  'Study App',
+  'Personal project in development focused on organizing study materials, creating summaries, and improving information accessibility.',
+  'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800&q=80',
+  NULL,
+  'https://github.com/KarenCordoba16/'
 )
 RETURNING id;
 
 -- Relacionar proyectos con tecnologías
--- Proyecto 1 (E-Commerce): React, Node.js, PostgreSQL, Docker
+-- Proyecto 1 (Nextalent): React, Javascript, MongoDB
 INSERT INTO project_technologies (project_id, technology_id)
 SELECT p.id, t.id
 FROM projects p, technologies t
-WHERE p.title = 'E-Commerce Full Stack'
-  AND t.name IN ('React', 'Node.js', 'PostgreSQL', 'Docker', 'TypeScript');
+WHERE p.title = 'Nextalent'
+  AND t.name IN ('React', 'JavaScript', 'MongoDB');
 
--- Proyecto 2 (Monitoreo): Python, Linux, PostgreSQL, Docker
+-- Proyecto 2 (DentCorp): Python, Django, MySQL
 INSERT INTO project_technologies (project_id, technology_id)
 SELECT p.id, t.id
 FROM projects p, technologies t
-WHERE p.title = 'Sistema de Monitoreo de Red'
-  AND t.name IN ('Python', 'Linux', 'PostgreSQL', 'Docker');
+WHERE p.title = 'DentCorp'
+  AND t.name IN ('Python', 'Django', 'MySQL');
 
--- Proyecto 3 (API): Node.js, Express, PostgreSQL, Docker
+-- Proyecto 3 (App de estudio): React, Javascript, PostgreSQL
 INSERT INTO project_technologies (project_id, technology_id)
 SELECT p.id, t.id
 FROM projects p, technologies t
-WHERE p.title = 'API REST con Autenticación'
-  AND t.name IN ('Node.js', 'Express', 'PostgreSQL', 'Docker', 'JavaScript');
+WHERE p.title = 'Study App'
+  AND t.name IN ('React', 'JavaScript', 'Python', 'PostgreSQL');
