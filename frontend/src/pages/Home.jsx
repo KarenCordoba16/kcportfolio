@@ -41,7 +41,7 @@ export default function Home() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
 
       {/* Fondo con patrón de grid */}
-      <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-100 dark:opacity-50 pointer-events-none" />
+      <div className="pointer-events-none" />
 
       {/* Burbuja de color de fondo */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-600/10 dark:bg-blue-600/5
@@ -137,7 +137,7 @@ export default function Home() {
                   <FaJs className="text-yellow-400" />
                   <SiTailwindcss className='text-cyan-500'/>
                   <FaNodeJs className='text-green-600' />
-                  <SiNextdotjs className="text-white" />
+                  <SiNextdotjs className="text-black dark:text-white" />
                   <SiMongodb className="text-green-500" />
                 </div>
               </div>

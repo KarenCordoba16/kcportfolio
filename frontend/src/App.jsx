@@ -32,7 +32,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-[#10121b] text-slate-900 dark:text-slate-100 transition-colors duration-300">
         <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(d => !d)} />
         <main>
           <Routes>

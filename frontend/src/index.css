@@ -31,7 +31,7 @@ body {
 /* Dark mode body */
 .dark body,
 body.dark {
-  background-color: #0f172a;
+  background-color: #141414;
   color: #f1f5f9;
 }
 
