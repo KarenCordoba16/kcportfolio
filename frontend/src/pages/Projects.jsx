@@ -100,7 +100,7 @@ export default function Projects() {
       )} */}
 
       {loading ? (
-        <Loader text="Cargando proyectos..." />
+        <Loader text="Loading projects..." />
       ) : (
         <div ref={gridRef} className="reveal">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -111,7 +111,7 @@ export default function Projects() {
 
           {projects.length === 0 && !error && (
             <div className="text-center py-20 text-slate-500 dark:text-slate-400">
-              <p className="text-lg">There are no projects available jet.</p>
+              <p className="text-lg">No projects available jet.</p>
             </div>
           )}
         </div>
