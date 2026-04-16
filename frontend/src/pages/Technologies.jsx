@@ -18,6 +18,11 @@ const FALLBACK_TECHS = [
   { id: 7,  name: 'Express',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
   { id: 8,  name: 'MongoDB',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
   { id: 9,  name: 'Tailwind',    logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+  { id: 10, name: 'Figma',       logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+  { id: 11, name: 'Vite',        logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
+  { id: 12, name: 'Postman',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
+  { id: 13, name: 'Django',      logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
+  { id: 14, name: 'MySQL',       logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
 ];
 
 function TechCard({ tech }) {
