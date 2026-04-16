@@ -49,7 +49,7 @@ export default function Projects() {
             technologies: [
               { id: 4, name: 'Python', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
               { id: 5, name: 'JavaScript',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-              { id: 6, name: 'PostgreSQL', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+              { id: 6, name:'MySQL',   logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
             ],
           },
           {
