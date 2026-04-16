@@ -59,7 +59,12 @@ INSERT INTO technologies (name, logo_url) VALUES
   ('Git',         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'),
   ('Express',     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'),
   ('MongoDB',     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'),
-  ('Tailwind',    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg')
+  ('Tailwind',    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'),
+  ('Figma',       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'),
+  ('Vite',        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'),
+  ('Postman',     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg'),
+  ('Django',      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg'),
+  ('MySQL',        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg')
 ON CONFLICT (name) DO NOTHING;
 
 -- Proyectos de ejemplo
