@@ -31,7 +31,7 @@ export default function Projects() {
             title: 'Nextalent',
             description: 'Web platform developed in a team to connect young professionals with companies through internship opportunities. Focused on usability and real-world application.',
             image_url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80',
-            project_url: '#',
+            // project_url: '#',
             github_url: 'https://github.com/Fran1107/NexTalent-Front',
             technologies: [
               { id: 1, name: 'React',      logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -44,7 +44,7 @@ export default function Projects() {
             title: 'Dentcorp',
             description: 'Web application developed in a team for managing dental appointments, allowing users to schedule and organize visits efficiently.',
             image_url: 'https://media.istockphoto.com/id/2214939121/photo/business-team-analyzing-financial-data-on-digital-tablets-during-a-meeting.jpg?s=1024x1024&w=is&k=20&c=U1kt5uKz7Wdq4dDDnYFW0nH5dLtmHvzQNEYg0RJPqeI=',
-            project_url: '#',
+            // project_url: '#',
             github_url: 'https://github.com/GastonCamu/DentCorp',
             technologies: [
               { id: 4, name: 'Python', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
@@ -57,7 +57,7 @@ export default function Projects() {
             title: 'Study App',
             description: 'Personal project in development focused on organizing study materials, creating summaries, and improving information accessibility.',
             image_url: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800&q=80',
-            project_url: '#',
+            // project_url: '#',
             github_url: 'https://github.com/KarenCordoba16/',
             technologies: [
               { id: 2, name: 'Node.js',    logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
