@@ -105,7 +105,7 @@ export default function Home() {
                   dark:hover:border-blue-400 dark:hover:text-blue-400
                   transition-all duration-200"
               >
-                Contact me
+                Contact
               </Link>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
             <div className="flex gap-3 mt-4">
               <div className="flex-1 px-4 py-3 rounded-xl bg-white dark:bg-slate-800
                 border border-slate-200 dark:border-slate-700 shadow-sm">
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Stack principal</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Main stack</p>
                 <div className="flex gap-2 text-xl">
                   <FaReact className="text-cyan-400" />
                   <FaJs className="text-yellow-400" />
@@ -155,7 +155,7 @@ export default function Home() {
           <Stat value="Web Apps" label="Full Stack Development" />
           <Stat value="Problem Solving" label="Practical Approach" />
           <Stat value="3+" label="Projects Built" />
-          <Stat value="Continuous" label="Learning Mindset" />
+          <Stat value="Always" label="Learning" />
         </div>
       </div>
     </section>

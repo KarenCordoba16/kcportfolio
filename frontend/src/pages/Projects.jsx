@@ -28,41 +28,41 @@ export default function Projects() {
         setProjects([
           {
             id: 1,
-            title: 'E-Commerce Full Stack',
-            description: 'Plataforma de comercio electrónico con autenticación JWT, carrito de compras y pasarela de pagos Stripe. Arquitectura de microservicios con Docker.',
-            image_url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+            title: 'Nextalent',
+            description: 'Web platform developed in a team to connect young professionals with companies through internship opportunities. Focused on usability and real-world application.',
+            image_url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80',
             project_url: '#',
-            github_url: '#',
+            github_url: 'https://github.com/Fran1107/NexTalent-Front',
             technologies: [
               { id: 1, name: 'React',      logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
               { id: 2, name: 'Node.js',    logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-              { id: 3, name: 'PostgreSQL', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+              { id: 3, name: 'MongoDB', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
             ],
           },
           {
             id: 2,
-            title: 'Sistema de Monitoreo de Red',
-            description: 'Dashboard en tiempo real para monitoreo de infraestructura. Detecta intrusiones y analiza tráfico con alertas automáticas.',
-            image_url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+            title: 'Dentcorp',
+            description: 'Web application developed in a team for managing dental appointments, allowing users to schedule and organize visits efficiently.',
+            image_url: 'https://media.istockphoto.com/id/2214939121/photo/business-team-analyzing-financial-data-on-digital-tablets-during-a-meeting.jpg?s=1024x1024&w=is&k=20&c=U1kt5uKz7Wdq4dDDnYFW0nH5dLtmHvzQNEYg0RJPqeI=',
             project_url: '#',
-            github_url: '#',
+            github_url: 'https://github.com/GastonCamu/DentCorp',
             technologies: [
               { id: 4, name: 'Python', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-              { id: 5, name: 'Linux',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
-              { id: 6, name: 'Docker', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+              { id: 5, name: 'JavaScript',  logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+              { id: 6, name: 'PostgreSQL', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
             ],
           },
           {
             id: 3,
-            title: 'API REST con Auth',
-            description: 'API RESTful completa con JWT, roles, rate limiting, documentación Swagger y tests con Jest. Desplegada con CI/CD en AWS.',
-            image_url: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80',
+            title: 'Study App',
+            description: 'Personal project in development focused on organizing study materials, creating summaries, and improving information accessibility.',
+            image_url: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800&q=80',
             project_url: '#',
-            github_url: '#',
+            github_url: 'https://github.com/KarenCordoba16/',
             technologies: [
               { id: 2, name: 'Node.js',    logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-              { id: 3, name: 'PostgreSQL', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-              { id: 6, name: 'Docker',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+              { id: 6, name: 'PostgreSQL', logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+              { id: 4, name: 'Python',     logo_url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
             ],
           },
         ]);
@@ -79,14 +79,14 @@ export default function Projects() {
 
       <div ref={titleRef} className="reveal">
         <SectionTitle
-          tag="Proyectos"
-          title="Lo que he construido"
-          subtitle="Una selección de proyectos personales y profesionales que muestran mi experiencia en desarrollo Full Stack y seguridad."
+          tag="Projects"
+          title="Building my projects"
+          subtitle="A selection of personal and professional projects that showcase my experience in full-stack development."
         />
       </div>
 
       {/* Aviso de backend desconectado */}
-      {error && (
+      {/* {error && (
         <div className="mb-8">
           <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20
             border border-amber-200 dark:border-amber-700 text-amber-700 dark:text-amber-400 text-sm flex gap-3">
@@ -97,7 +97,7 @@ export default function Projects() {
             <span>Backend no disponible. Mostrando datos de ejemplo. Conecta el servidor para ver proyectos reales.</span>
           </div>
         </div>
-      )}
+      )} */}
 
       {loading ? (
         <Loader text="Cargando proyectos..." />
@@ -111,7 +111,7 @@ export default function Projects() {
 
           {projects.length === 0 && !error && (
             <div className="text-center py-20 text-slate-500 dark:text-slate-400">
-              <p className="text-lg">No hay proyectos disponibles aún.</p>
+              <p className="text-lg">There are no projects available jet.</p>
             </div>
           )}
         </div>

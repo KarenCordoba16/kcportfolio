@@ -138,7 +138,7 @@ export default function About() {
         <div ref={timelineRef} className="reveal">
           <h3 className="text-sm font-mono font-semibold text-blue-600 dark:text-blue-400
             mb-6 tracking-widest uppercase">
-            Trayectoria
+            Career
           </h3>
           <div className="relative flex flex-col gap-0">
             {/* Línea vertical */}

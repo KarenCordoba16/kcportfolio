@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import api from '../utils/api';
 import { useReveal } from '../hooks/useReveal';
 import { SectionTitle, Loader } from '../components/ui/index.jsx';
+import { LuCalendarClock } from "react-icons/lu";
 
 // Datos de respaldo si el backend no responde
 const FALLBACK_TECHS = [
@@ -111,8 +112,7 @@ export default function Technologies() {
       {/* Frase de cierre */}
       <div className="mt-16 text-center">
         <p className="text-sm text-slate-500 dark:text-slate-400 font-mono">
-          Next step: .NET 
-          <span className="ml-2 text-blue-600 dark:text-blue-400">🚀</span>
+          That's all.. for now
         </p>
       </div>
     </div>
